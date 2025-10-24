@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Github, Shield, Terminal, Lock, Search } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -26,35 +27,34 @@ const Projects: React.FC = () => {
     );
 
   }, []);
-                      {/* CHANGE*/}
+
+  const handleProjectHover = (index: number, isEntering: boolean) => {
+    if (isEntering) {
+      setHoveredProject(index);
+      gsap.to(`.project-card-${index}`, {
+        scale: 1.02,
+        boxShadow: '0 20px 60px rgba(6, 182, 212, 0.3)',
+        duration: 0.3,
+        ease: 'power2.out'
+      });
+    } else {
+      setHoveredProject(null);
+      gsap.to(`.project-card-${index}`, {
+        scale: 1,
+        boxShadow: '0 0 0 rgba(6, 182, 212, 0)',
+        duration: 0.3,
+        ease: 'power2.in'
+      });
+    }
+  };
+
   const projects = [
     {
-      title: 'SecureVault',
-      description: 'A military-grade password manager with quantum-resistant encryption and biometric authentication.',
-      tech: ['Python', 'AES-256', 'Biometrics', 'Qt'],
-      icon: Lock,
-      status: 'Completed',
-      statusColor: 'text-green-400',
-      github: '#',
-      demo: '#',
-      image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
-    },
-    {
-      title: 'NetScan Pro',
-      description: 'Advanced network reconnaissance tool with stealth scanning capabilities and vulnerability detection.',
-      tech: ['Python', 'Nmap', 'Scapy', 'Socket'],
+      title: 'Retrieval Augmented Chatbot',
+      description: 'AI chatbot using RAG that enables real-time company data access through natural-language queries.',
+      detailedDescription: 'Built an AI chatbot using Retrieval-Augmented Generation (RAG) that lets users access real-time company data through natural-language queries, integrating n8n, Pinecone and Vue.js to generate clear reports. Implements vector embeddings for semantic search and context-aware responses.',
+      tech: ['RAG', 'n8n', 'Pinecone', 'Vue.js', 'AI'],
       icon: Search,
-      status: 'In Progress',
-      statusColor: 'text-yellow-400',
-      github: '#',
-      demo: '#',
-      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
-    },
-    {
-      title: 'WebGuard',
-      description: 'Automated web application security scanner that detects SQL injection, XSS, and other vulnerabilities.',
-      tech: ['JavaScript', 'Node.js', 'Puppeteer', 'Express'],
-      icon: Shield,
       status: 'Completed',
       statusColor: 'text-green-400',
       github: '#',
@@ -62,18 +62,42 @@ const Projects: React.FC = () => {
       image: 'https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
-      title: 'CyberTerminal',
-      description: 'Custom penetration testing terminal with integrated tools and automated reporting features.',
-      tech: ['Bash', 'Python', 'Linux', 'Docker'],
-      icon: Terminal,
-      status: 'Beta',
-      statusColor: 'text-blue-400',
+      title: 'Smart Handwriting Recognition',
+      description: 'Computer vision system that enables users to write on-screen using a camera.',
+      detailedDescription: 'Developed a Python/OpenCV computer vision project that lets users write directly on screen using a camera, integrating AI to detect and interpret the written words or movements. Features real-time hand tracking, gesture recognition, and ML-based character recognition with 90%+ accuracy.',
+      tech: ['Python', 'OpenCV', 'Computer Vision', 'AI'],
+      icon: Lock,
+      status: 'Completed',
+      statusColor: 'text-green-400',
       github: '#',
       demo: '#',
       image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
+    },
+    {
+      title: 'AI-Driven Vulnerability Scanner',
+      description: 'Modular Python project replicating n8n-style bug bounty workflows.',
+      detailedDescription: 'Developed a modular Python project that replicates n8n-style bug bounty workflows, where an AI agent autonomously generates, executes, and interprets security commands in real time. Leverages LLM integration for intelligent vulnerability detection and automated exploit generation.',
+      tech: ['Python', 'AI Agent', 'Bug Bounty', 'Security'],
+      icon: Shield,
+      status: 'In Progress',
+      statusColor: 'text-yellow-400',
+      github: '#',
+      demo: '#',
+      image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
+    },
+    {
+      title: 'Educational Platform Project',
+      description: 'Full-stack educational platform with interactive learning features.',
+      detailedDescription: 'Comprehensive educational platform built with modern web technologies. Features include user authentication, course management, interactive quizzes, progress tracking, and real-time collaboration. Implements responsive design and optimized performance for seamless learning experience.',
+      tech: ['React.js', 'Node.js', 'MongoDB', 'WebSockets'],
+      icon: Terminal,
+      status: 'In Progress',
+      statusColor: 'text-yellow-400',
+      github: '#',
+      demo: '#',
+      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     }
   ];
-                      {/* CHANGE*/}
   return (
     <section id="projects" ref={sectionRef} className="py-20 px-6 relative z-10">
       <div className="max-w-6xl mx-auto">
@@ -83,20 +107,26 @@ const Projects: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A showcase of cybersecurity tools and applications I've developed to strengthen digital defenses.
+            Building solutions across AI, cybersecurity, and web development.
           </p>
         </div>
 
+        {/* Projects Grid */}
         <div className="projects-grid grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="project-card group">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 overflow-hidden">
+            <div 
+              key={index} 
+              className="project-card relative"
+              onMouseEnter={() => handleProjectHover(index, true)}
+              onMouseLeave={() => handleProjectHover(index, false)}
+            >
+              <div className={`project-card-${index} bg-gray-800/50 backdrop-blur-sm rounded-xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 overflow-hidden relative`}>
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                   <div className="absolute top-4 right-4">
@@ -117,7 +147,7 @@ const Projects: React.FC = () => {
                   </p>
 
                   {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, techIndex) => (
                       <span key={techIndex} className="px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs font-mono rounded border border-cyan-500/30">
                         {tech}
@@ -125,27 +155,71 @@ const Projects: React.FC = () => {
                     ))}
                   </div>
 
+                  {/* Project Details - Always Visible */}
+                  <div className="mb-4 p-4 bg-cyan-900/10 rounded-lg border border-cyan-500/20">
+                    <h4 className="text-sm font-mono font-bold text-cyan-400 mb-2">Project Details</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {project.detailedDescription}
+                    </p>
+                  </div>
+
                   {/* Project Links */}
                   <div className="flex space-x-4">
                     <a 
                       href={project.github}
-                      className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group"
+                      className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                     >
                       <Github className="w-5 h-5" />
                       <span className="text-sm font-mono">Code</span>
                     </a>
                     <a 
                       href={project.demo}
-                      className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors group"
+                      className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors"
                     >
                       <ExternalLink className="w-5 h-5" />
                       <span className="text-sm font-mono">Demo</span>
                     </a>
                   </div>
-                </div>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  {/* Hover Overlay - Additional Info */}
+                  {hoveredProject === index && (
+                    <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-md rounded-xl p-6 flex flex-col justify-center z-20 animate-fade-in">
+                      <div className="text-center">
+                        <project.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                        <h3 className="text-2xl font-mono font-bold text-white mb-3">{project.title}</h3>
+                        <span className={`inline-block px-3 py-1 rounded-full text-xs font-mono font-bold ${project.statusColor} bg-gray-800/70 mb-4`}>
+                          {project.status}
+                        </span>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          {project.detailedDescription}
+                        </p>
+                        <div className="flex flex-wrap gap-2 justify-center mb-4">
+                          {project.tech.map((tech, techIndex) => (
+                            <span key={techIndex} className="px-3 py-1 bg-cyan-900/30 text-cyan-400 text-xs font-mono rounded border border-cyan-500/30">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="flex space-x-4 justify-center mt-4">
+                          <a 
+                            href={project.github}
+                            className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
+                          >
+                            <Github className="w-5 h-5" />
+                            <span className="text-sm font-mono">View Code</span>
+                          </a>
+                          <a 
+                            href={project.demo}
+                            className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
+                          >
+                            <ExternalLink className="w-5 h-5" />
+                            <span className="text-sm font-mono">Live Demo</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}

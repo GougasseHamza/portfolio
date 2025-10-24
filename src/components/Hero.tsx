@@ -80,12 +80,12 @@ const Hero: React.FC = () => {
           <div className="text-xl md:text-2xl text-gray-300 font-mono mb-8">
             <span className="text-green-400">[hamza@azmah]$</span> whoami
             <br />
-            <span className="text-white">Cybersecurity student - Competitive programmer - At the egde of AI & cybersecurity.</span>
+            <span className="text-white">Cybersecurity student - Competitive programmer - At the edge of AI & cybersecurity.</span>
           </div>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            20 years old , third year (out of 5) student in cybersecurity at UM6P, rabat, morrocoo, 
-            Passioned about web security, entrepreneur at day , co founder of U-academy , tutoring platform for moroccan highschoolers
-            Competitive programmer , qualified twice to ACPC in egypt  CHANGE
+            20 years old, third year (out of 5) cybersecurity student at UM6P, Rabat, Morocco. 
+            Passionate about web security and competitive programming. Entrepreneur and co-founder of U-mentor 
+            (check experience), a tutoring platform for Moroccan high schoolers. Qualified twice to ACPC in Egypt.
           </p>
         </div>
                         {/* CHANGE*/}
@@ -114,15 +114,19 @@ const Hero: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-6 mb-12">
           <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-purple-500/30">
             <Code className="w-5 h-5 text-purple-400" />
-            <span className="font-mono text-sm">Penetration Testing</span>
+            <span className="font-mono text-sm">Competitive Programming</span>
           </div>
           <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-cyan-500/30">
             <Shield className="w-5 h-5 text-cyan-400" />
-            <span className="font-mono text-sm">Security Research</span>
+            <span className="font-mono text-sm">Web Exploitation</span>
           </div>
           <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-green-500/30">
             <Terminal className="w-5 h-5 text-green-400" />
-            <span className="font-mono text-sm">CTF Challenges</span>
+            <span className="font-mono text-sm">Backend Development</span>
+          </div>
+          <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-yellow-500/30">
+            <Code className="w-5 h-5 text-yellow-400" />
+            <span className="font-mono text-sm">Teaching</span>
           </div>
         </div>
 

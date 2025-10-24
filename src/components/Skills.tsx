@@ -43,63 +43,39 @@ const Skills: React.FC = () => {
   }, []);
                       {/* CHANGE*/}
   const technicalSkills = [
-    { name: 'Penetration Testing', level: 85, color: 'bg-red-500' },
-    { name: 'Network Security', level: 90, color: 'bg-blue-500' },
-    { name: 'Web Application Security', level: 88, color: 'bg-purple-500' },
-    { name: 'Cryptography', level: 75, color: 'bg-green-500' },
-    { name: 'Forensics', level: 70, color: 'bg-yellow-500' },
-    { name: 'Social Engineering', level: 65, color: 'bg-pink-500' },
+    { name: 'Problem Solving', level: 80, color: 'bg-blue-500' },
+    { name: 'Algorithmic Design', level: 80, color: 'bg-purple-500' },
+    { name: 'Web Pentesting', level: 70, color: 'bg-red-500' },
+    { name: 'Entrepreneurship', level: 70, color: 'bg-green-500' },
+    { name: 'Volleyball', level: 80, color: 'bg-yellow-500' },
+    { name: 'Cryptography', level: 60, color: 'bg-pink-500' },
   ];
                       {/* CHANGE*/}
 
   const skillCategories = [
     {
       icon: Shield,
-      title: 'Offensive Security',
-      skills: ['Metasploit', 'Burp Suite', 'Nmap', 'Wireshark', 'SQLmap'],
+      title: 'Web Offensive Security',
+      skills: ['Burp Suite', 'Caido', 'SQLmap', 'Nmap'],
       color: 'border-red-500/30 hover:border-red-400/50'
-    },
-    {
-      icon: Terminal,
-      title: 'System Administration',
-      skills: ['Linux', 'Windows', 'PowerShell', 'Bash', 'Docker'],
-      color: 'border-green-500/30 hover:border-green-400/50'
     },
     {
       icon: Code,
       title: 'Programming',
-      skills: ['Python', 'JavaScript', 'C++', 'Go', 'Rust'],
+      skills: ['Python', 'Java', 'C', 'C++'],
       color: 'border-blue-500/30 hover:border-blue-400/50'
     },
     {
-      icon: Lock,
-      title: 'Cryptography',
-      skills: ['RSA', 'AES', 'Hash Functions', 'PKI', 'Digital Signatures'],
-      color: 'border-purple-500/30 hover:border-purple-400/50'
-    },
-    {
-      icon: Search,
-      title: 'Reconnaissance',
-      skills: ['OSINT', 'Social Engineering', 'Footprinting', 'Enumeration'],
-      color: 'border-yellow-500/30 hover:border-yellow-400/50'
+      icon: Terminal,
+      title: 'Web Frameworks',
+      skills: ['React.js', 'Vue.js'],
+      color: 'border-green-500/30 hover:border-green-400/50'
     },
     {
       icon: Database,
-      title: 'Database Security',
-      skills: ['SQL Injection', 'NoSQL', 'Database Hardening', 'Access Control'],
+      title: 'Databases',
+      skills: ['SQL', 'SQLite', 'Database Security'],
       color: 'border-cyan-500/30 hover:border-cyan-400/50'
-    },
-    {
-      icon: Network,
-      title: 'Network Security',
-      skills: ['Firewall Config', 'IDS/IPS', 'VPN', 'Network Monitoring'],
-      color: 'border-indigo-500/30 hover:border-indigo-400/50'
-    },
-    {
-      icon: Bug,
-      title: 'Vulnerability Assessment',
-      skills: ['Nessus', 'OpenVAS', 'CVSS', 'Risk Assessment'],
-      color: 'border-pink-500/30 hover:border-pink-400/50'
     }
   ];
 
@@ -172,7 +148,7 @@ const Skills: React.FC = () => {
             Certifications & Achievements
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Security+', 'CEH', 'CISSP (In Progress)', 'OSCP (In Progress)', 'eJPT'].map((cert, index) => (
+            {['CWSE (In Progress)', 'MCPC 2025 Bronze Medalist', 'ACPC 2024 & 2025 Finalist'].map((cert, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
                 <span className="font-mono text-cyan-400 text-sm">{cert}</span>
               </div>
