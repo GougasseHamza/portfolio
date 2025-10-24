@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Mail, Github, Linkedin, Twitter, Send, Shield, Key } from 'lucide-react';
+import { Mail, Github, Linkedin, Send, Shield, Key } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -84,25 +84,19 @@ const Contact: React.FC = () => {
     {
       icon: Github,
       name: 'GitHub',
-      url: 'https://github.com/alexchen-cybersec',
+      url: 'https://github.com/GougasseHamza',
       color: 'hover:text-white'
     },
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/alex-chen-cybersec',
+      url: 'https://www.linkedin.com/in/hamza-gougasse-8301372a0/',
       color: 'hover:text-blue-400'
-    },
-    {
-      icon: Twitter,
-      name: 'Twitter',
-      url: 'https://twitter.com/alexchen_sec',
-      color: 'hover:text-cyan-400'
     },
     {
       icon: Mail,
       name: 'Email',
-      url: 'mailto:alex.chen@cybersec.edu',
+      url: 'mailto:hamza.gougasse@um6p.ma',
       color: 'hover:text-green-400'
     }
   ];
@@ -218,7 +212,7 @@ const Contact: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-cyan-400" />
-                  <span className="font-mono text-gray-300">alex.chen@cybersec.edu</span>
+                  <span className="font-mono text-gray-300">hamza.gougasse@um6p.ma</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Shield className="w-5 h-5 text-green-400" />
@@ -267,7 +261,7 @@ const Contact: React.FC = () => {
         <div className="mt-16 text-center fade-in">
           <div className="bg-gray-800/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
             <p className="text-gray-400 font-mono text-sm">
-              © 2024 Alex Chen | Cybersecurity Student Portfolio
+              © 2024 Hamza Gougasse | Cybersecurity enthusiast with business mindset
             </p>
             <p className="text-gray-500 font-mono text-xs mt-2">
               Built with security in mind • All communications encrypted

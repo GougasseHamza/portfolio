@@ -224,27 +224,6 @@ const Projects: React.FC = () => {
             </div>
           ))}
         </div>
-                              {/* CHANGE*/}
-        {/* GitHub Stats */}
-        <div className="mt-16 text-center fade-in">
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-cyan-500/30 max-w-2xl mx-auto">
-            <h3 className="text-xl font-mono font-bold text-white mb-6">GitHub Activity</h3>
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-cyan-400 font-mono">50+</div>
-                <div className="text-gray-400 text-sm">Repositories</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-400 font-mono">200+</div>
-                <div className="text-gray-400 text-sm">Commits</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400 font-mono">15+</div>
-                <div className="text-gray-400 text-sm">Stars</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

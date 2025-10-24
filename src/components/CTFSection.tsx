@@ -222,7 +222,7 @@ const CTFSection: React.FC = () => {
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
-              <span className="ml-4 text-gray-300 font-mono text-sm">alex@cybersec-terminal:~$</span>
+              <span className="ml-4 text-gray-300 font-mono text-sm">hamza@shell:~$</span>
             </div>
             <div 
               ref={terminalRef}
