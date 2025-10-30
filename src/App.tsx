@@ -16,21 +16,35 @@ function App() {
   const appRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initialize smooth scrolling and page animations
-    gsap.set('.fade-in', { opacity: 0, y: 50 });
+    // Initialize smooth scrolling and page animations with slower durations
+    gsap.set('.fade-in', { opacity: 0, y: 30 });
     
     ScrollTrigger.batch('.fade-in', {
       onEnter: (elements) => {
         gsap.fromTo(elements, 
-          { opacity: 0, y: 50 }, 
-          { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: 'power2.out' }
+          { opacity: 0, y: 30 }, 
+          { 
+            opacity: 1, 
+            y: 0, 
+            duration: 1.2, 
+            stagger: 0.15, 
+            ease: 'power3.out' 
+          }
         );
       },
       onLeave: (elements) => {
-        gsap.to(elements, { opacity: 0.3, duration: 0.5 });
+        gsap.to(elements, { 
+          opacity: 0.4, 
+          duration: 0.8,
+          ease: 'power2.inOut'
+        });
       },
       onEnterBack: (elements) => {
-        gsap.to(elements, { opacity: 1, duration: 0.5 });
+        gsap.to(elements, { 
+          opacity: 1, 
+          duration: 0.8,
+          ease: 'power2.inOut'
+        });
       },
     });
 

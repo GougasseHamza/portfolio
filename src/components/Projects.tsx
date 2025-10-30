@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
       detailedDescription: 'Built an enterprise-grade AI chatbot using Retrieval-Augmented Generation (RAG) that empowers users to access real-time company data through intuitive natural-language queries. Seamlessly integrates n8n workflow automation, Pinecone vector database, and Vue.js to generate clear, actionable reports. Implements advanced vector embeddings for semantic search and context-aware responses.',
       tech: ['RAG', 'n8n', 'Pinecone', 'Vue.js', 'AI', 'NLP'],
       icon: Search,
-      status: 'Completed',
+      status: 'Active',
       statusColor: 'text-green-400',
       github: 'https://github.com/GougasseHamza/chatbot-sql',
       demo: '#',
