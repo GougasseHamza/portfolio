@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Github, Shield, Terminal, Lock, Search } from 'lucide-react';
+import { ExternalLink, Github, Shield, Terminal, Lock, Search, BookOpen } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -50,52 +50,52 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
-      title: 'U-mentor Educational Platform',
-      description: 'Co-founded student-led educational startup generating 150K+ DH revenue, serving 200+ students.',
-      detailedDescription: 'Co-CEO and lead developer of U-mentor, a comprehensive educational platform for Moroccan high school students. Built full-stack web application with user management, course delivery, payment processing, and analytics. Led team of 5 developers and managed operations while personally teaching mathematics to 200+ students.',
-      tech: ['React.js', 'Node.js', 'MongoDB', 'Stripe API', 'AWS'],
+      title: 'Retrieval Augmented Chatbot',
+      description: 'Intelligent AI chatbot leveraging RAG architecture for real-time company data access through natural-language queries.',
+      detailedDescription: 'Built an enterprise-grade AI chatbot using Retrieval-Augmented Generation (RAG) that empowers users to access real-time company data through intuitive natural-language queries. Seamlessly integrates n8n workflow automation, Pinecone vector database, and Vue.js to generate clear, actionable reports. Implements advanced vector embeddings for semantic search and context-aware responses.',
+      tech: ['RAG', 'n8n', 'Pinecone', 'Vue.js', 'AI', 'NLP'],
       icon: Search,
       status: 'Active',
       statusColor: 'text-green-400',
-      github: 'https://github.com/GougasseHamza/umentor-platform',
-      demo: 'https://umentor.ma',
+      github: 'https://github.com/GougasseHamza/chatbot-sql',
+      demo: '#',
       image: 'https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
-      title: 'Web Security Assessment Tool',
-      description: 'Automated vulnerability scanner for web applications with AI-powered threat detection.',
-      detailedDescription: 'Developed a comprehensive web security assessment tool that performs automated vulnerability scanning, SQL injection testing, XSS detection, and security header analysis. Features AI-powered threat detection, detailed reporting, and integration with popular CI/CD pipelines. Used by multiple organizations for security audits.',
-      tech: ['Python', 'FastAPI', 'Selenium', 'AI/ML', 'Docker'],
-      icon: Lock,
+      title: 'Tawjeeh-Sup EdTech Platform',
+      description: 'Full-stack e-learning platform enabling seamless student access to video content and educational resources.',
+      detailedDescription: 'Developed a comprehensive full-stack e-learning platform where students can securely login, stream pre-recorded educational videos, and download course materials. Built with Vue.js for a responsive, dynamic frontend and Firebase for robust authentication, real-time database, and cloud storage. Features include user role management, progress tracking, and optimized media delivery for enhanced learning experience.',
+      tech: ['Vue.js', 'Firebase', 'Authentication', 'Cloud Storage', 'Full-Stack'],
+      icon: BookOpen,
       status: 'Completed',
       statusColor: 'text-green-400',
-      github: 'https://github.com/GougasseHamza/websec-scanner',
+      github: 'https://github.com/GougasseHamza/platform',
       demo: '#',
-      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
-      title: 'Competitive Programming Solutions',
-      description: 'Comprehensive collection of algorithmic solutions and data structure implementations.',
-      detailedDescription: 'Maintained repository of 1000+ competitive programming solutions across platforms like Codeforces, AtCoder, and LeetCode. Includes advanced algorithms, data structures, and mathematical concepts. Features detailed explanations, complexity analysis, and test cases. Used by 500+ developers for learning and reference.',
-      tech: ['C++', 'Python', 'Algorithms', 'Data Structures', 'Mathematics'],
+      title: 'AI-Driven Vulnerability Scanner',
+      description: 'Autonomous security testing framework replicating n8n-style bug bounty workflows with AI-powered command generation.',
+      detailedDescription: 'Developed a modular Python security framework that replicates n8n-style bug bounty workflows, where an AI agent autonomously generates, executes, and interprets security commands in real-time. Leverages LLM integration for intelligent vulnerability detection, automated exploit generation, and comprehensive security assessments. Designed for ethical hacking and penetration testing workflows.',
+      tech: ['Python', 'AI Agent', 'Security', 'Bug Bounty', 'LLM', 'Automation'],
       icon: Shield,
-      status: 'Ongoing',
-      statusColor: 'text-blue-400',
-      github: 'https://github.com/GougasseHamza/competitive-programming',
+      status: 'Completed',
+      statusColor: 'text-green-400',
+      github: 'https://github.com/GougasseHamza/scanner_bug_bounty',
       demo: '#',
       image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
-      title: 'Bug Bounty Automation Suite',
-      description: 'Automated reconnaissance and vulnerability discovery tools for ethical hacking.',
-      detailedDescription: 'Built comprehensive suite of automation tools for bug bounty hunting and penetration testing. Includes subdomain enumeration, port scanning, vulnerability detection, and report generation. Features modular architecture, multi-threading support, and integration with popular security tools. Successfully used in multiple bug bounty programs.',
-      tech: ['Python', 'Go', 'Bash', 'Security Tools', 'Automation'],
-      icon: Terminal,
-      status: 'In Progress',
-      statusColor: 'text-yellow-400',
-      github: 'https://github.com/GougasseHamza/bugbounty-automation',
+      title: 'Smart Handwriting Recognition',
+      description: 'Real-time computer vision system enabling on-screen writing through camera-based hand tracking and AI interpretation.',
+      detailedDescription: 'Developed an advanced Python/OpenCV computer vision project that enables users to write directly on screen using a camera, integrating AI to detect and interpret written words and hand movements. Features real-time hand tracking, intuitive gesture recognition, and ML-based character recognition achieving 90%+ accuracy. Combines MediaPipe for hand detection with custom-trained models for robust character interpretation.',
+      tech: ['Python', 'OpenCV', 'Computer Vision', 'AI', 'MediaPipe', 'ML'],
+      icon: Lock,
+      status: 'Completed',
+      statusColor: 'text-green-400',
+      github: '#',
       demo: '#',
-      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     }
   ];
   return (
