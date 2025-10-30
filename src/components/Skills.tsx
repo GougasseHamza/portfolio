@@ -48,7 +48,7 @@ const Skills: React.FC = () => {
     { name: 'Web Pentesting', level: 70, color: 'bg-red-500' },
     { name: 'Entrepreneurship', level: 70, color: 'bg-green-500' },
     { name: 'Volleyball', level: 80, color: 'bg-yellow-500' },
-    { name: 'Cryptography', level: 60, color: 'bg-pink-500' },
+    { name: 'Python Developement & Automation', level: 80, color: 'bg-pink-500' },
   ];
                       {/* CHANGE*/}
 
@@ -56,7 +56,7 @@ const Skills: React.FC = () => {
     {
       icon: Shield,
       title: 'Web Offensive Security',
-      skills: ['Burp Suite', 'Caido', 'SQLmap', 'Nmap'],
+      skills: ['Burp Suite', 'Web Pentesting & VAPT', 'Bug Hunting Tppms'],
       color: 'border-red-500/30 hover:border-red-400/50'
     },
     {
@@ -148,7 +148,7 @@ const Skills: React.FC = () => {
             Certifications & Achievements
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {['CWSE (In Progress)', 'MCPC 2025 Bronze Medalist', 'ACPC 2024 & 2025 Finalist'].map((cert, index) => (
+            {['CWSE (In Progress)', 'MCPC 2025 Bronze Medalist', 'ACPC 2024 & 2025 Finalist', 'Cipher Challenge Cryptography Edition Gold Medalist'].map((cert, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
                 <span className="font-mono text-cyan-400 text-sm">{cert}</span>
               </div>

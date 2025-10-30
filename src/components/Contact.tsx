@@ -111,8 +111,8 @@ const Contact: React.FC = () => {
                               {/* CHANGE*/}
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Ready to collaborate on cybersecurity projects or discuss potential opportunities? 
-            Send me an encrypted message!
+            Ready to collaborate on projects or discuss potential opportunities? 
+            Send me an (secure) message!
           </p>
         </div>
 
@@ -261,7 +261,7 @@ const Contact: React.FC = () => {
         <div className="mt-16 text-center fade-in">
           <div className="bg-gray-800/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
             <p className="text-gray-400 font-mono text-sm">
-              © 2024 Hamza Gougasse | Cybersecurity enthusiast with business mindset
+              © 2025 Hamza Gougasse | Cybersecurity enthusiast with business mindset
             </p>
             <p className="text-gray-500 font-mono text-xs mt-2">
               Built with security in mind • All communications encrypted

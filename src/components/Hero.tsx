@@ -74,18 +74,20 @@ const Hero: React.FC = () => {
       <div className="max-w-6xl mx-auto text-center z-10">
         <div ref={textRef} className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold font-mono mb-6">
-            <span className="text-white glitch">Hamza</span>{' '}
-            <span className="text-cyan-400 glitch">Gougasse</span>
+            <span className="text-white ">Hamza</span>{' '}
+            <span className="text-white">Gougasse</span>
           </h1>
           <div className="text-xl md:text-2xl text-gray-300 font-mono mb-8">
             <span className="text-green-400">[hamza@azmah]$</span> whoami
             <br />
-            <span className="text-white">Cybersecurity student - Competitive programmer - At the edge of AI & cybersecurity.</span>
+            <span className="text-white">Cybersecurity student - Backend Developper - Entrepreneur</span>
           </div>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            20 years old, third year (out of 5) cybersecurity student at UM6P, Rabat, Morocco. 
-            Passionate about web security and competitive programming. Entrepreneur and co-founder of U-mentor 
-            (check experience), a tutoring platform for Moroccan high schoolers. Qualified twice to ACPC in Egypt.
+          Third-year cybersecurity student at UM6P, Rabat, specializing in web security 
+and competitive programming. Co-founded U-mentor, a tutoring platform empowering 
+Moroccan high schoolers. Competed twice at the Arab Collegiate Programming Contest 
+(ACPC) in Egypt.
+    Play the Challenges to know more :)
           </p>
         </div>
                         {/* CHANGE*/}
@@ -105,8 +107,8 @@ const Hero: React.FC = () => {
                 ./solve_eat_repeat.sh
               </div>
               <div className="text-cyan-400 mb-1">Getting the coffee ( I dont like it ) </div>
-              <div className="text-purple-400 mb-1">Booting up Arch...</div>
-              <div className="text-green-400">Let's code and hack! 🚀</div>
+              <div className="text-purple-400 mb-1">Booting up Arch... ( i use arch btw ) </div>
+              <div className="text-green-400">Let's solve and hack </div>
             </div>
           </div>
         </div>
@@ -122,11 +124,11 @@ const Hero: React.FC = () => {
           </div>
           <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-green-500/30">
             <Terminal className="w-5 h-5 text-green-400" />
-            <span className="font-mono text-sm">Backend Development</span>
+            <span className="font-mono text-sm">Backend Development -Python Specialist</span>
           </div>
           <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-yellow-500/30">
             <Code className="w-5 h-5 text-yellow-400" />
-            <span className="font-mono text-sm">Teaching</span>
+            <span className="font-mono text-sm">Tutoring</span>
           </div>
         </div>
 

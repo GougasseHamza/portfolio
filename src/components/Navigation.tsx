@@ -41,7 +41,7 @@ const Navigation: React.FC = () => {
           <div className="flex items-center space-x-2">
             <Shield className="w-8 h-8 text-cyan-400" />
             <span className="text-xl font-mono font-bold text-white">
-              CyberSec<span className="text-cyan-400">Portfolio</span>
+              Hamzaa<span className="text-cyan-400">Gougasse</span>
             </span>
           </div>
 

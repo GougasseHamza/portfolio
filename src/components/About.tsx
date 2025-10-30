@@ -77,7 +77,7 @@ const About: React.FC = () => {
                 <TrendingUp className="w-8 h-8 text-orange-400" />
                 <div>
                   <h3 className="text-3xl font-bold font-mono text-white">U-mentor</h3>
-                  <span className="text-sm text-orange-400 font-mono">Entrepreneurship Project</span>
+                  <span className="text-sm text-orange-400 font-mono">Personal Business</span>
                 </div>
               </div>
               <span className="px-3 py-1 bg-orange-500 text-gray-900 text-xs font-bold font-mono rounded-full">
@@ -132,30 +132,40 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Hover Overlay */}
-            {hoveredUmentor && (
-              <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-md rounded-xl p-8 flex flex-col justify-center z-20 animate-fade-in">
-                <div className="text-center">
-                  <TrendingUp className="w-16 h-16 text-orange-400 mx-auto mb-4" />
-                  <h3 className="text-3xl font-mono font-bold text-white mb-4">Real-World Impact</h3>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    Student-led startup created by students, for students. Partnering with leading educational 
-                    platforms in Morocco. Successfully managed operations, curriculum development, and strategic 
-                    partnerships while maintaining exceptionally high student satisfaction rates.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
-                    <div className="bg-orange-900/30 p-4 rounded-lg border border-orange-500/30">
-                      <div className="text-3xl font-bold text-orange-400 mb-1">12+</div>
-                      <div className="text-sm text-gray-400">Months Active</div>
-                    </div>
-                    <div className="bg-orange-900/30 p-4 rounded-lg border border-orange-500/30">
-                      <div className="text-3xl font-bold text-orange-400 mb-1">Top</div>
-                      <div className="text-sm text-gray-400">Platform Partner</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+      {/* Hover Overlay */}
+{hoveredUmentor && (
+  <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-md rounded-xl p-8 flex flex-col justify-center z-20 animate-fade-in">
+    <div className="text-center">
+      <TrendingUp className="w-16 h-16 text-orange-400 mx-auto mb-4" />
+      <h3 className="text-3xl font-mono font-bold text-white mb-4">Personal Business</h3>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Student-led startup created by students, for students. Partnering with leading educational 
+        platforms in Morocco. Successfully managed operations, curriculum development, and strategic 
+        partnerships while maintaining exceptionally high student satisfaction rates.
+      </p>
+      <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mb-6">
+        <div className="bg-orange-900/30 p-4 rounded-lg border border-orange-500/30">
+          <div className="text-3xl font-bold text-orange-400 mb-1">12+</div>
+          <div className="text-sm text-gray-400">Months Active</div>
+        </div>
+        <div className="bg-orange-900/30 p-4 rounded-lg border border-orange-500/30">
+          <div className="text-3xl font-bold text-orange-400 mb-1">Rising</div>
+          <div className="text-sm text-gray-400">Educational Platform</div>
+        </div>
+      </div>
+      <a 
+        href="https://www.u-mentor.ma" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors font-medium"
+      >
+        Visit Website →
+      </a>
+    </div>
+  </div>
+)}
+
+
           </div>
         </div>
 
@@ -181,13 +191,13 @@ const About: React.FC = () => {
                   <span className="text-xs font-mono text-gray-500">2025</span>
                 </div>
                 <h4 className="text-lg font-mono font-bold text-white mb-1">
-                  MCPC Bronze
+                  MCPC Bronze Medalist
                 </h4>
                 <p className="text-gray-400 text-sm mb-3">
                   Moroccan Collegiate Programming Contest
                 </p>
                 <div className="pt-3 border-t border-gray-700/50">
-                  <span className="text-xs text-cyan-400 font-mono">National Competition</span>
+                  <span className="text-xs text-cyan-400 font-mono">National Competition of Programming </span>
                 </div>
               </div>
 
@@ -213,13 +223,13 @@ const About: React.FC = () => {
                   <span className="text-xs font-mono text-gray-500">Ongoing</span>
                 </div>
                 <h4 className="text-lg font-mono font-bold text-white mb-1">
-                  1000+ Problems
+                  900+ Problems
                 </h4>
                 <p className="text-gray-400 text-sm mb-3">
                   Algorithms & Data Structures
                 </p>
                 <div className="pt-3 border-t border-gray-700/50">
-                  <span className="text-xs text-cyan-400 font-mono">Expert Level</span>
+                  <span className="text-xs text-cyan-400 font-mono">I know to optimise and develop algorithms, and necessary data structures to solve complex problems</span>
                 </div>
               </div>
             </div>
@@ -242,17 +252,15 @@ const About: React.FC = () => {
                   <p><span className="text-purple-400">name:</span> <span className="text-yellow-300">"Hamza Gougasse"</span>,</p>
                   <p><span className="text-purple-400">role:</span> <span className="text-yellow-300">"Cybersecurity Student & Builder"</span>,</p>
                   <p><span className="text-purple-400">location:</span> <span className="text-yellow-300">"UM6P, Rabat, Morocco"</span>,</p>
-                  <p><span className="text-purple-400">passion:</span> <span className="text-yellow-300">"CP, CTF, Web Exploitation, Pen Testing"</span>,</p>
-                  <p><span className="text-purple-400">motto:</span> <span className="text-yellow-300">"skop"</span></p>
+                  <p><span className="text-purple-400">passion:</span> <span className="text-yellow-300">"CP, CTF, Web Exploitation, Volleyball"</span>,</p>
                 </div>
                 <p className="font-mono text-sm text-gray-300">{'};'}</p>
               </div>
 
               <div className="mt-6 p-4 bg-gray-900/50 rounded-lg border border-gray-700">
                 <p className="text-gray-300 leading-relaxed">
-                  20 years old, third year (out of 5) cybersecurity student at UM6P, Rabat, Morocco. 
-                  Passionate about web security and competitive programming. Entrepreneur and co-founder of U-mentor, 
-                  a tutoring platform for Moroccan high schoolers. Qualified twice to ACPC in Egypt.
+                  Hello there , I am Hamza, 20 years old , Entrepreneur at heart, I love  solving problems , automating processes, and hunting for vulnerabilities!
+                  Looking forward to getting in touch !
                 </p>
               </div>
             </div>
