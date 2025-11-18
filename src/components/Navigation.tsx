@@ -39,9 +39,8 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Shield className="w-8 h-8 text-cyan-400" />
             <span className="text-xl font-mono font-bold text-white">
-              Hamzaa<span className="text-cyan-400">Gougasse</span>
+              Hamza<span className="text-cyan-400">Gougasse</span>
             </span>
           </div>
 

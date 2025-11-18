@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { User, GraduationCap, Award, Coffee, Trophy, Medal, Target, TrendingUp, DollarSign, Users, Shield } from 'lucide-react';
+import { User, GraduationCap, Award, Coffee, Trophy, Medal, Target, TrendingUp, DollarSign, Users,  } from 'lucide-react';
 
 const About: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
